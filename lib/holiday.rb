@@ -65,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday_hash.each do |season, holiday|
       str += "#{season}:\n  "
       holiday.each do |name, array|
-        str += "#{name}: #{array}"
+        str += "#{name}: #{array.flatten}"
       end
     end
     binding.pry
